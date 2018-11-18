@@ -1,15 +1,27 @@
-.mdc-button {
-  color: purple;
-  outline: black;
+
+div {
+  width: 40%;
+  margin: 0 auto;
+  background-color: #e3e3e3;
+  padding: 0px 0px 0px 40px;
 
 }
 
-@import "@material/button/mdc-button";
+/* h1 .mdc-typography--headline6 .mdc-typography--headline2 {
+ } */
 
 h1 {
   color: purple;
 }
 
-.btncopy {
-  font-size: 5px;
+.mdc-typography--headline6 {
+padding: 50px 0px 0px 0px;
+color: grey;
+/* background-color: green; */
+margin: 0px 0px -40px 0px;
+}
+
+.mdc-typography--headline2 {
+  padding: 0px 0px 40px 0px;
+  /* background-color:red; */
 }

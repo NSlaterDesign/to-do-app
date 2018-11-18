@@ -11,11 +11,15 @@ function onReady() {
   addToDoForm.addEventListener();
   addToDoForm.addEventListener('submit', () => {
     event.preventDefault();
+    deleteButton.innerHTML
 
+    // create a delete button
+      let newButton = document.createElement('deleteButton');
+      
     // get the text
- let title = newToDoText.value;
+    let title = newToDoText.value;
 
- // create a new li
+  // create a new li
    let newLi = document.createElement('li');
 
    // create a new input
@@ -26,6 +30,7 @@ function onReady() {
 
    // set the title
    newLi.textContent = title;
+
 
    // attach the checkbox to the li
    newLi.appendChild(checkbox);
@@ -40,6 +45,6 @@ function onReady() {
  };
 
  //add MDL
- import {MDCRipple} from '@material/ripple';
-
-const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+//  import {MDCRipple} from '@material/ripple';
+//
+// const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
