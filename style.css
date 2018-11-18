@@ -1,0 +1,15 @@
+.mdc-button {
+  color: purple;
+  outline: black;
+
+}
+
+@import "@material/button/mdc-button";
+
+h1 {
+  color: purple;
+}
+
+.btncopy {
+  font-size: 5px;
+}
