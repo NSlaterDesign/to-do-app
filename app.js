@@ -1,50 +1,32 @@
-//
-// window.onload = function() {
-//    alert("The window has loaded!");
-//       onReady();
+function onReady(){
+  const ADD_TODO_FORM = document.getElementById('addToDoForm');
+  const NEW_TODO_TEXT = document.getElementById('newToDoText');
+  const TODO_LIST = document.getElementById('toDoList');
 
-function onReady() {
-  const addToDoForm = document.getElementById('addToDoForm');
-  const newToDoText = document.getElementById('newToDoText');
-  const toDoList = document.getElementById('toDoList');
+  ADD_TODO_FORM.addEventListner('submit', (event) => {
+    event.preventDefault ();
 
-  addToDoForm.addEventListener();
-  addToDoForm.addEventListener('submit', () => {
-    event.preventDefault();
-    deleteButton.innerHTML
+    let title = NEW_TODO_TEXT.value;
 
-    // create a delete button
-      let newButton = document.createElement('deleteButton');
-      
-    // get the text
-    let title = newToDoText.value;
+    let newLi = document.createElement('li'); //<li></li>
+    let checkbox = document.createElement('element');
+    checkbox.type = "checkbox";
 
-  // create a new li
-   let newLi = document.createElement('li');
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = "Delete";
+    TODO_LIST.removeChild(this.parentElement);
+  })
 
-   // create a new input
-   let checkbox = document.createElement('input');
+    newLi.textContent = title;
+    newLi.appendChild(checkbox);
+    newLi.appendChild(deleteBtn);
+    TODO_LIST.appendChild(newLi);
+    NEW_TODO_TEXT.value = "";
 
-   // set the input's type to checkbox
-   checkbox.type = "checkbox";
-
-   // set the title
-   newLi.textContent = title;
-
-
-   // attach the checkbox to the li
-   newLi.appendChild(checkbox);
-
-   // attach the li to the ul
-   toDoList.appendChild(newLi);
-
-   //empty the input
-  newToDoText.value = '';
   });
+};
 
- };
+window.onload = function() {
+  onReady();
 
- //add MDL
-//  import {MDCRipple} from '@material/ripple';
-//
-// const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+};
