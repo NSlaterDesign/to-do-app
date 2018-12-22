@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do App</title>
+  </head>
+  <body>
+    <h1>To-Do App</h1>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-  <title>To-Do App</title>
-</head>
+    <form id="addToDoForm">
+      <label for="newToDoText">New To-Do:</label>
+      <input type="text" id="newToDoText">
+      <button type="submit">Add To-Do!</button>
+    </form>
 
-<body>
+    <ul id="toDoList">
+    </ul>
 
-
-  <h1 class="mdc-typography--headline2" >To-Do App</h1>
-
-  <form id="appToDoForm">
-    <label class="mdc-typography--body1" for="newToDoText">New to-do:</label>
-    <input type="text" id="newToDoText">
-    <button class="mdc-button" type="submit">Add</button>
-  </form>
-
-  <ul id="toDoList"></ul>
-
-
-
-  <script src="app.js"></script>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
